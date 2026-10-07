@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merpati Note Book - Toko Komputer, Laptop & Service Terpercaya</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- TOPBAR / HEADER -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="bg-blue-600 text-white p-2 rounded-lg">
+                        <i class="fa-solid fa-laptop-code text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-bold tracking-tight text-slate-900">Merpati Note Book</span>
+                        <p class="text-xs text-slate-500 hidden sm:block">Solusi Komputer & Jaringan</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-6 text-sm font-medium">
+                    <a href="#beranda" class="text-blue-600 hover:text-blue-700 transition">Beranda</a>
+                    <a href="#produk" class="text-slate-600 hover:text-blue-600 transition">Produk</a>
+                    <a href="#service" class="text-slate-600 hover:text-blue-600 transition">Service</a>
+                    <a href="#jasa" class="text-slate-600 hover:text-blue-600 transition">Jasa & CCTV</a>
+                    <a href="#tentang" class="text-slate-600 hover:text-blue-600 transition">Tentang Kami</a>
+                    <a href="#kontak" class="text-slate-600 hover:text-blue-600 transition">Kontak</a>
+                </nav>
+
+                <!-- CTA WhatsApp Header -->
+                <div class="hidden md:flex items-center">
+                    <a href="https://wa.me/6281314141770?text=Halo%20Merpati Note Book,%20saya%20ingin%20konsultasi%20produk/service." target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center space-x-2 transition shadow-sm">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>WhatsApp Kami</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-slate-600 hover:text-slate-900 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-4 space-y-2">
+            <a href="#beranda" class="block px-3 py-2 rounded-md text-base font-medium text-blue-600 bg-blue-50">Beranda</a>
+            <a href="#produk" class="block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:bg-slate-50">Produk</a>
+            <a href="#service" class="block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:bg-slate-50">Service</a>
+            <a href="#jasa" class="block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:bg-slate-50">Jasa & CCTV</a>
+            <a href="#tentang" class="block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:bg-slate-50">Tentang Kami</a>
+            <a href="#kontak" class="block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:bg-slate-50">Kontak</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION / BERANDA -->
+    <section id="beranda" class="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white py-20 lg:py-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-center lg:text-left">
+                    <span class="inline-block bg-blue-500/20 text-blue-300 border border-blue-400/30 text-xs px-3 py-1 rounded-full font-semibold uppercase tracking-wider">Pusat IT & Komputer Terlengkap</span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Solusi Komputer, Laptop & Jaringan Terpercaya
+                    </h1>
+                    <p class="text-lg text-slate-300 max-w-xl mx-auto lg:mx-0">
+                        Menyediakan produk PC Rakitan, Laptop berkualitas, sparepart original, serta layanan service handal dan instalasi jaringan profesional.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                        <a href="#produk" class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-xl transition shadow-lg shadow-blue-600/30 text-center">
+                            Lihat Katalog Produk
+                        </a>
+                        <a href="#service" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-medium px-6 py-3 rounded-xl transition text-center">
+                            Layanan Service & Jasa
+                        </a>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="bg-slate-800/80 border border-slate-700 p-6 rounded-2xl shadow-2xl backdrop-blur-sm max-w-md w-full">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                            <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                            <div class="w-3 h-3 bg-emerald-500 rounded-full"></div>
+                            <span class="text-xs text-slate-400 font-mono ml-2">Quick Check Service</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Cek Status Service Anda</h3>
+                        <p class="text-xs text-slate-400 mb-4">Masukkan nomor nota atau ID service untuk memantau perbaikan perangkat Anda.</p>
+                        <div class="space-y-3">
+                            <input type="text" id="no-nota" placeholder="Contoh: SRV-2026-001" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500">
+                            <button onclick="cekService()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 rounded-lg text-sm transition">
+                                Cek Status Sekarang
+                            </button>
+                            <div id="hasil-cek" class="hidden text-xs bg-slate-900 border border-slate-700 p-3 rounded-lg text-slate-300"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KATALOG PRODUK SECTION -->
+    <section id="produk" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <h2 class="text-3xl font-bold tracking-tight text-slate-900">Katalog Produk & Komponen</h2>
+            <p class="text-slate-600 mt-2">Temukan perangkat keras, laptop, dan aksesoris komputer terbaik dengan garansi resmi.</p>
+			 <p class="text-slate-600 mt-2">"Tingkatkan produktivitas bisnis Anda melalui koleksi aplikasi digital dan sistem manajemen terpercaya, software berkualitas tinggi yang mudah dioperasikan untuk kebutuhan Toko, Kantor, maupun RT/RW. Perumahan."</p>
+        </div>
+
+        <!-- Filter & Search Bar -->
+        <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-200 mb-8 flex flex-col md:flex-row gap-4 items-center justify-between">
+            <div class="w-full md:w-1/3 relative">
+                <i class="fa-solid fa-search absolute left-3.5 top-3.5 text-slate-400"></i>
+                <input type="text" id="search-input" onkeyup="filterProduk()" placeholder="Cari nama produk / komponen..." class="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-sm focus:outline-none focus:border-blue-500">
+            </div>
+            <div class="w-full md:w-auto flex flex-wrap gap-2">
+                <button onclick="setKategori('Semua')" class="cat-btn bg-blue-600 text-white px-4 py-2 rounded-xl text-xs font-medium transition">Semua</button>
+				<button onclick="setKategori('Aplikasi')" class="cat-btn bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 rounded-xl text-xs font-medium transition">Aplikasi & Software</button>
+                <button onclick="setKategori('Laptop')" class="cat-btn bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 rounded-xl text-xs font-medium transition">Laptop</button>
+                <button onclick="setKategori('PC Rakitan')" class="cat-btn bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 rounded-xl text-xs font-medium transition">PC Rakitan</button>
+                <button onclick="setKategori('Komponen')" class="cat-btn bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 rounded-xl text-xs font-medium transition">Komponen</button>
+                <button onclick="setKategori('Aksesoris')" class="cat-btn bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 rounded-xl text-xs font-medium transition">Aksesoris</button>
+                <button onclick="setKategori('Networking')" class="cat-btn bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 rounded-xl text-xs font-medium transition">Networking</button>
+				
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Produk dirender otomatis via JavaScript -->
+        </div>
+    </section>
+
+    <!-- HALAMAN SERVICE & JASA -->
+    <section id="service" class="bg-white py-16 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold tracking-tight text-slate-900">Layanan Service Komputer & Laptop</h2>
+                <p class="text-slate-600 mt-2">Ditangani oleh teknisi berpengalaman dengan garansi perbaikan dan transparan.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl">
+                    <div class="text-blue-600 text-3xl mb-4"><i class="fa-solid fa-laptop-medical"></i></div>
+                    <h3 class="text-lg font-bold mb-2">Service Hardware & Software</h3>
+                    <p class="text-sm text-slate-600 mb-4">Perbaikan motherboard, ganti LCD, keyboard, instal ulang Windows, pembersihan debu (cleaning), hingga pemulihan data.</p>
+                    <a href="https://wa.me/6281314141770?text=Halo%20Merpati Note Book,%20saya%20ingin%20konsultasi%20service%20perangkat." target="_blank" class="text-blue-600 text-sm font-semibold flex items-center space-x-1 hover:underline">
+                        <span>Konsultasi Service</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+                <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl" id="jasa">
+                    <div class="text-blue-600 text-3xl mb-4"><i class="fa-solid fa-network-wired"></i></div>
+                    <h3 class="text-lg font-bold mb-2">Instalasi Jaringan & LAN</h3>
+                    <p class="text-sm text-slate-600 mb-4">Pemasangan kabel LAN, setting router/access point WiFi kantor, sekolah, cafe, dan pengelolaan jaringan stabil.</p>
+                    <a href="https://wa.me/6281314141770?text=Halo%20Merpati Note Book,%20saya%20ingin%20minta%20penawaran%20jasa%20jaringan." target="_blank" class="text-blue-600 text-sm font-semibold flex items-center space-x-1 hover:underline">
+                        <span>Minta Penawaran Jaringan</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+                <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl">
+                    <div class="text-blue-600 text-3xl mb-4"><i class="fa-solid fa-video"></i></div>
+                    <h3 class="text-lg font-bold mb-2">Instalasi CCTV & Keamanan</h3>
+                    <p class="text-sm text-slate-600 mb-4">Pemasangan CCTV rumah, toko, gudang, setting online DVR/NVR di HP agar dapat dipantau dari mana saja.</p>
+                    <a href="https://wa.me/6281314141770?text=Halo%20Merpati Note Book,%20saya%20ingin%20minta%20penawaran%20pemasangan%20CCTV." target="_blank" class="text-blue-600 text-sm font-semibold flex items-center space-x-1 hover:underline">
+                        <span>Minta Penawaran CCTV</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TENTANG KAMI & KONTAK -->
+    <section id="tentang" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-4">
+                <span class="text-blue-600 font-semibold text-xs uppercase tracking-wider">Tentang Merpati Note Book</span>
+                <h2 class="text-3xl font-bold text-slate-900">Mitra Teknologi & IT Terpercaya Sejak 2020</h2>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Merpati Note Book hadir untuk memenuhi kebutuhan perangkat komputasi harian, kebutuhan kantor, gaming rig berperfoma tinggi, hingga pemeliharaan sistem IT korporat. Kami berkomitmen memberikan produk original bergaransi resmi dengan pelayanan ramah dan solutif.
+                </p>
+                <div class="grid grid-cols-2 gap-4 pt-2">
+                    <div class="border-l-2 border-blue-600 pl-4">
+                        <h4 class="font-bold text-xl text-slate-900">100%</h4>
+                        <p class="text-xs text-slate-500">Produk Bergaransi Resmi</p>
+                    </div>
+                    <div class="border-l-2 border-blue-600 pl-4">
+                        <h4 class="font-bold text-xl text-slate-900">5.000+</h4>
+                        <p class="text-xs text-slate-500">Pelanggan Puas</p>
+                    </div>
+                </div>
+            </div>
+            <div id="kontak" class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 space-y-6">
+                <h3 class="text-xl font-bold text-slate-900">Informasi & Lokasi Toko</h3>
+                <div class="space-y-4 text-sm text-slate-600">
+                    <div class="flex items-start space-x-3">
+                        <i class="fa-solid fa-location-dot text-blue-600 mt-1"></i>
+                        <div>
+                            <strong>Alamat Toko:</strong><br>
+                            Jl. Raya Jatinangor No. 151 Cikeruh - Jatinangor Sumedang
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fa-solid fa-phone text-blue-600"></i>
+                        <div>
+                            <strong>Telepon / WhatsApp:</strong><br>
+                            +62 813 - 1414 - 1770
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fa-solid fa-clock text-blue-600"></i>
+                        <div>
+                            <strong>Jam Operasional:</strong><br>
+                            Senin - Sabtu: 10.00 - 21.00 WIB
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-2">
+                    <a href="https://wa.me/6281314141770?text=Halo%20Merpati Note Book,%20saya%20ingin%20menghubungi%20toko." target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 rounded-xl flex items-center justify-center space-x-2 transition shadow-sm">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Chat Langsung via WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>
+                <span class="text-white font-bold text-lg">Merpati Note Book</span>
+                <p class="text-xs text-slate-500 mt-1">Solusi Komputer, Laptop, Jaringan & IT</p>
+            </div>
+            <p class="text-xs text-slate-500">© 2026 Merpati Note Book. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6281314141770?text=Halo%20Merpati Note Book,%20saya%20ingin%20bertanya%20mengenai%20produk%20Anda." target="_blank" class="fixed bottom-6 right-6 z-50 bg-emerald-600 hover:bg-emerald-700 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition hover:scale-110">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- JavaScript Link -->
+    <script src="script.js"></script>
+</body>
+</html>
