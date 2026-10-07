@@ -247,6 +247,46 @@ function renderProducts(filterName = '', category = 'Semua') {
     });
 }
 
+// Cek status service interaktif
+function cekService() {
+    const nota = document.getElementById('no-nota').value.trim();
+    const hasil = document.getElementById('hasil-cek');
+    hasil.classList.remove('hidden');
+
+    if (!nota) {
+        hasil.innerHTML = `<span class="text-red-400">Silakan masukkan nomor nota terlebih dahulu!</span>`;
+        return;
+    }
+
+    hasil.innerHTML = `<span class="text-blue-300"><i class="fa-solid fa-spinner fa-spin mr-1"></i> Memeriksa data servis...</span>`;
+
+    // Cek apakah berjalan di lingkungan Google Apps Script Web App atau Statis Lokal
+    if (typeof google !== 'undefined' && google.script && google.script.run) {
+        google.script.run
+            .withSuccessHandler(res => {
+                if (res.success) {
+                    const biayaStr = res.estimasiBiaya > 0 ? ` (Biaya: Rp ${res.estimasiBiaya.toLocaleString('id-ID')})` : "";
+                    hasil.innerHTML = `<strong>Unit:</strong> ${res.unit}<br><strong>Status:</strong> <span class="text-emerald-400 font-bold">${res.status}</span>${biayaStr}`;
+                } else {
+                    hasil.innerHTML = `<span class="text-amber-400">${res.message}</span>`;
+                }
+            })
+            .withFailureHandler(() => {
+                hasil.innerHTML = `<span class="text-red-400">Gagal terhubung ke server database.</span>`;
+            })
+            .checkPublicServiceStatus(nota);
+    } else {
+        // Mode Simulasi Lokal (jika dibuka via file HTML biasa)
+        if (nota.toUpperCase() === "SRV-2026-001") {
+            hasil.innerHTML = `<strong>Status:</strong> Sedang diperiksa oleh Teknisi (Estimasi selesai: Besok)`;
+        } else if (nota.toUpperCase() === "SRV-2026-002") {
+            hasil.innerHTML = `<strong>Status:</strong> Selesai / Sudah dapat diambil di toko.`;
+        } else {
+            hasil.innerHTML = `<span class="text-amber-400">Nomor nota "${nota}" tidak ditemukan dalam simulasi lokal.</span>`;
+        }
+    }
+}
+
 // Filter kategori
 function setKategori(cat) {
     currentCategory = cat;
