@@ -307,7 +307,9 @@ function filterProduk() {
     renderProducts(keyword, currentCategory);
 }
 
-// Simulasi cek status service
+// Ganti dengan URL Web App Apps Script Anda yang berakhiran /exec
+const GAS_API_URL = "https://script.google.com/macros/s/AKfycbys33G9iDEHOHFzXmhgpYhGyJPrLuekipDKDCKzuYVku5X-gUAwcIV45nYXJqVd7Yhy/exec"; 
+
 function cekService() {
     const nota = document.getElementById('no-nota').value.trim();
     const hasil = document.getElementById('hasil-cek');
@@ -318,14 +320,30 @@ function cekService() {
         return;
     }
 
-    // Simulasi data status service contoh
-    if (nota === "SRV-2026-001") {
-        hasil.innerHTML = `<strong>Status:</strong> Sedang diperiksa oleh Teknisi (Estimasi selesai: Besok)`;
-    } else if (nota === "SRV-2026-002") {
-        hasil.innerHTML = `<strong>Status:</strong> Selesai / Sudah dapat diambil di toko.`;
-    } else {
-        hasil.innerHTML = `<span class="text-amber-400">Nomor nota "${nota}" tidak ditemukan. Pastikan nomor benar atau hubungi WhatsApp kami.</span>`;
-    }
+    hasil.innerHTML = `<span class="text-blue-300"><i class="fa-solid fa-spinner fa-spin mr-1"></i> Memeriksa data servis...</span>`;
+
+    // Mengambil data secara real-time dari Google Sheets via Apps Script API
+    fetch(`${GAS_API_URL}?action=checkService&nota=${encodeURIComponent(nota)}`)
+        .then(response => response.json())
+        .then(res => {
+            if (res.success) {
+                const biayaStr = res.estimasiBiaya > 0 ? ` (Biaya: Rp ${res.estimasiBiaya.toLocaleString('id-ID')})` : "";
+                hasil.innerHTML = `
+                    <div class="space-y-1">
+                        <div><strong>Pelanggan:</strong> ${res.pelanggan}</div>
+                        <div><strong>Unit:</strong> ${res.unit}</div>
+                        <div><strong>Keluhan:</strong> ${res.keluhan}</div>
+                        <div><strong>Status:</strong> <span class="text-emerald-400 font-bold uppercase">${res.status}</span>${biayaStr}</div>
+                    </div>
+                `;
+            } else {
+                hasil.innerHTML = `<span class="text-amber-400">${res.message}</span>`;
+            }
+        })
+        .catch(err => {
+            console.error(err);
+            hasil.innerHTML = `<span class="text-red-400">Gagal terhubung ke server database toko.</span>`;
+        });
 }
 
 // Mobile Menu Toggle
